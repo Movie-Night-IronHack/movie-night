@@ -1,2 +1,2 @@
 # movie-night
-Proyect for IronHack Modul 2 / Movie Agenda
+Proyect for IronHack Modul 2 / Movie Agend
