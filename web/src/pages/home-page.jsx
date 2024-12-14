@@ -12,7 +12,7 @@ function HomePage() {
           <SideBar />
           <RenderCards />
         </div>
-        <h3>Hola Mundo</h3>
+
       </PageLayout>
     </>
   );
