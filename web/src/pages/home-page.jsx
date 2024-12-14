@@ -1,5 +1,5 @@
 import PageLayout from "../components/layouts/page-layout";
-import RenderCards from "../components/renderCards/render-cards";
+import RenderCards from "../components/listCards/list-cards";
 import SideBar from "../components/sideBar/side-bar";
 import NavBar from "../components/ui/navbar/navbar";
 
