@@ -1,5 +1,5 @@
 function RenderCard({ movie }) {
-  console.log(movie);
+//   console.log(movie);
   return (
     <div className="card event-item" style={{ width: "10rem" }}>
       <img

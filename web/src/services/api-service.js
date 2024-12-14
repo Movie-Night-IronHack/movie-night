@@ -17,6 +17,7 @@ const apiKey = {
   },
 };
 
-const trendingMovies = () => https.get("3/trending/movie/week", apiKey);
+const trendingMovies = (page) =>
+  https.get(`/3/trending/movie/week?page=${page.toString()}`, apiKey);
 
 export { trendingMovies };
