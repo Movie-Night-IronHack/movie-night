@@ -1,4 +1,5 @@
 import HomePage from "./pages/home-page";
+import UserPage from "./pages/user-page";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
