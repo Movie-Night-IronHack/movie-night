@@ -6,9 +6,15 @@ function UserMovies({ className = "" }) {
   const [userMovieList, setUserMovieList] = useState([]);
 
   useEffect(() => {
-    MovieApi.getUserMovies().then((movies) => {
-      setUserMovieList(movies);
-    });
+    MovieApi.getUserMovies()
+      .then((movies) => {
+        const uniqueMovies = movies.filter(
+          (movie, index, self) =>
+            index === self.findIndex((m) => m.id === movie.id)
+        );
+        setUserMovieList(uniqueMovies);
+      })
+      .catch((error) => console.error("Error fetching user movies:", error));
   }, []);
 
   const handleDelete = (movie) => {
@@ -37,3 +43,4 @@ function UserMovies({ className = "" }) {
 }
 
 export default UserMovies;
+

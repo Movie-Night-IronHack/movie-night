@@ -2,11 +2,35 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function RenderCards({ className = "", selectedGenre }) {
+function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
   const [movieList, setMovieList] = useState([]);
   const [counter, setCounter] = useState(1);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [categoryName, setCategoryName] = useState("Trending");
+
+  const categories = [
+    { name: "Action", id: 28 },
+    { name: "Adventure", id: 12 },
+    { name: "Animation", id: 16 },
+    { name: "Comedy", id: 35 },
+    { name: "Crime", id: 80 },
+    { name: "Documentary", id: 99 },
+    { name: "Drama", id: 18 },
+    { name: "Family", id: 10751 },
+    { name: "Fantasy", id: 14 },
+    { name: "History", id: 36 },
+    { name: "Horror", id: 27 },
+    { name: "Music", id: 10402 },
+    { name: "Mystery", id: 9648 },
+    { name: "Romance", id: 10749 },
+    { name: "Science Fiction", id: 878 },
+    { name: "TV Movie", id: 10770 },
+    { name: "Thriller", id: 53 },
+    { name: "War", id: 10752 },
+    { name: "Western", id: 37 },
+    { name: "Trending", id: null },
+  ];
 
   useEffect(() => {
     if (selectedGenre === null) {
@@ -25,14 +49,25 @@ function RenderCards({ className = "", selectedGenre }) {
   }, [selectedGenre, page]);
 
   const handleWatch = (movie) => {
-    // console.log("Movie added to watchlist:", movie);
-    MovieApi.addMovieUser(movie)
-      .then(() =>
-        setMovieList((prevList) => prevList.filter((m) => m.id !== movie.id))
-      )
-      .catch((error) =>
-        console.error(error, "Dentro del catch de handleWatch")
-      );
+    MovieApi.getUserMovies()
+      .then((userMovies) => {
+        const isAlreadyAdded = userMovies.some(
+          (userMovie) => userMovie.id === movie.id
+        );
+
+        if (!isAlreadyAdded) {
+          MovieApi.addMovieUser(movie)
+            .then(() => {
+              setMovieList((prevList) =>
+                prevList.filter((m) => m.id !== movie.id)
+              );
+            })
+            .catch((error) => console.error("Error adding movie:", error));
+        } else {
+          console.log("Movie is already in the watchlist.");
+        }
+      })
+      .catch((error) => console.error("Error fetching user movies:", error));
   };
 
   const fiveMovies = () => {
@@ -66,7 +101,34 @@ function RenderCards({ className = "", selectedGenre }) {
   return (
     <>
       <div>
-        <h2>Movies</h2>
+        <div className="dropdown">
+          <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {categoryName}
+          </button>
+
+          <ul className="dropdown-menu">
+            {categories.map((category) => (
+              <li key={category.name}>
+                <button
+                  className="dropdown-item"
+                  type="button"
+                  onClick={() => {
+                    onCategorySelect(category.id);
+                    setCategoryName(category.name);
+                  }}
+                >
+                  {category.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <h2>{categoryName} Movies</h2>
         <div className={`d-flex flex-wrap gap-3 ${className}`}>
           {fiveMovies(counter).map((movie) => (
             <RenderCard
@@ -76,22 +138,24 @@ function RenderCards({ className = "", selectedGenre }) {
             />
           ))}
         </div>
-        <button
-          type="button"
-          className="btn btn-secondary"
-          disabled={counter === 1 && page === 1 ? "disable" : ""}
-          onClick={() => handlePrevious()}
-        >
-          Previous
-        </button>
-        <button
-          type="button"
-          className="btn btn-secondary"
-          disabled={page > totalPages}
-          onClick={() => handleNext()}
-        >
-          Next
-        </button>
+        <div className="d-flex gap-2">
+          <button
+            type="button"
+            className="btn btn-secondary"
+            disabled={counter === 1 && page === 1 ? "disable" : ""}
+            onClick={() => handlePrevious()}
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            disabled={page > totalPages}
+            onClick={() => handleNext()}
+          >
+            Next
+          </button>
+        </div>
         {counter}/{page}/{selectedGenre}
       </div>
       ;

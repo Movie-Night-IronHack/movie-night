@@ -16,8 +16,11 @@ function HomePage() {
       <NavBar />
       <PageLayout>
         <div className="d-flex gap-5">
-          <SideBar onCategorySelect={handleCategorySelect} />
-          <RenderCards selectedGenre={selectedGenre} />
+          <SideBar />
+          <RenderCards
+            selectedGenre={selectedGenre}
+            onCategorySelect={handleCategorySelect}
+          />
         </div>
       </PageLayout>
     </>

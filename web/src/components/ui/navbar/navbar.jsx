@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="navbar bg-body-tertiary">
-      <div className="container">
+      <div className="container d-flex align-items-center justify-content-between">
         <a className="navbar-brand">Search Movies & Series</a>
-        <div className="mt-3">
+        <div className="d-flex align-items-center gap-2">
           <Link to="/" className="btn btn-light">
             Home Page
           </Link>
           <Link to="/watchlist" className="btn btn-light">
-            My Movies
+            My Watch List
           </Link>
         </div>
-        <form className="d-flex" role="search">
+        <form className="d-flex align-items-center" role="search">
           <input
             className="form-control me-2"
             type="search"

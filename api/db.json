@@ -1,69 +1,25 @@
 {
   "movies": [
     {
-      "id": "1184918",
-      "backdrop_path": "/4zlOPT9CrtIX05bBIkYxNZsm5zN.jpg",
-      "title": "The Wild Robot",
-      "original_title": "The Wild Robot",
-      "overview": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
-      "poster_path": "/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+      "id": "1064213",
+      "backdrop_path": "/4cp40IyTpFfsT2IKpl0YlUkMBIR.jpg",
+      "title": "Anora",
+      "original_title": "Anora",
+      "overview": "A young sex worker from Brooklyn gets her chance at a Cinderella story when she meets and impulsively marries the son of an oligarch. Once the news reaches Russia, her fairytale is threatened as his parents set out to get the marriage annulled.",
+      "poster_path": "/7MrgIUeq0DD2iF7GR6wqJfYZNeC.jpg",
       "media_type": "movie",
       "adult": false,
       "original_language": "en",
       "genre_ids": [
-        16,
-        28,
-        878,
-        10751
-      ],
-      "popularity": 926.568,
-      "release_date": "2024-09-08",
-      "video": false,
-      "vote_average": 8.382,
-      "vote_count": 3528
-    },
-    {
-      "id": "939243",
-      "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
-      "title": "Sonic the Hedgehog 3",
-      "original_title": "Sonic the Hedgehog 3",
-      "overview": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched in every way, Team Sonic must seek out an unlikely alliance in hopes of stopping Shadow and protecting the planet.",
-      "poster_path": "/nyEr1VqvKx1YiesMC3oTB2fZvpY.jpg",
-      "media_type": "movie",
-      "adult": false,
-      "original_language": "en",
-      "genre_ids": [
-        878,
-        12,
-        35,
-        10751
-      ],
-      "popularity": 1576.966,
-      "release_date": "2024-12-19",
-      "video": false,
-      "vote_average": 7.4,
-      "vote_count": 28
-    },
-    {
-      "id": "402431",
-      "backdrop_path": "/uVlUu174iiKhsUGqnOSy46eIIMU.jpg",
-      "title": "Wicked",
-      "original_title": "Wicked",
-      "overview": "In the land of Oz, ostracized and misunderstood green-skinned Elphaba is forced to share a room with the popular aristocrat Glinda at Shiz University, and the two's unlikely friendship is tested as they begin to fulfill their respective destinies as Glinda the Good and the Wicked Witch of the West.",
-      "poster_path": "/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg",
-      "media_type": "movie",
-      "adult": false,
-      "original_language": "en",
-      "genre_ids": [
-        18,
         10749,
-        14
+        35,
+        18
       ],
-      "popularity": 660.104,
-      "release_date": "2024-11-20",
+      "popularity": 493.355,
+      "release_date": "2024-10-14",
       "video": false,
-      "vote_average": 7.6,
-      "vote_count": 591
+      "vote_average": 7.3,
+      "vote_count": 421
     }
   ]
 }
