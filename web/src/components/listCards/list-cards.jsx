@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
+function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayingMovies = [] }) {
   const [movieList, setMovieList] = useState([]);
   const [counter, setCounter] = useState(1);
   const [page, setPage] = useState(1);
@@ -35,16 +35,22 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
   useEffect(() => {
     if (selectedGenre === null) {
       MovieApi.trendingMovies(page).then((movies) => {
-        setMovieList(movies.results);
+        const filteredMovies = movies.results.filter(
+          (movie) => !nowPlayingMovies.some((np) => np.id === movie.id)
+        );
+        setMovieList(filteredMovies);
         setTotalPages(movies.total_pages);
       });
     } else {
       MovieApi.discoverMovies(selectedGenre, page).then((movies) => {
-        setMovieList(movies.results);
+        const filteredMovies = movies.results.filter(
+          (movie) => !nowPlayingMovies.some((np) => np.id === movie.id)
+        );
+        setMovieList(filteredMovies);
         setTotalPages(movies.total_pages);
       });
     }
-  }, [selectedGenre, page]);
+  }, [selectedGenre, nowPlayingMovies,page]);
 
   const handleWatch = (movie) => {
     MovieApi.getUserMovies()

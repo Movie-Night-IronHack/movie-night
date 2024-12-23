@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function NowPlaying({ className = "" }) {
+function NowPlaying({ className = "", onFetchMovies }) {
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [counter, setCounter] = useState(1);
@@ -11,6 +11,9 @@ function NowPlaying({ className = "" }) {
   useEffect(() => {
     MovieApi.nowPlaying(page).then((movies) => {
       setNowPlayingMovies(movies.results);
+      if (onFetchMovies) {
+        onFetchMovies(movies.results);
+      }
       setTotalPages(movies.total_pages);
     });
   }, [page]);

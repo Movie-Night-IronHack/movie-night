@@ -8,6 +8,7 @@ import Popular from "../components/popular/popular";
 
 function HomePage() {
   const [selectedGenre, setSelectedGenre] = useState(null);
+  const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
 
   const handleCategorySelect = (genreId) => {
     setSelectedGenre(genreId);
@@ -23,8 +24,9 @@ function HomePage() {
             <RenderCards
               selectedGenre={selectedGenre}
               onCategorySelect={handleCategorySelect}
+              nowPlayingMovies={nowPlayingMovies}
             />
-            <NowPlaying />
+            <NowPlaying onFetchMovies={setNowPlayingMovies}/>
             <Popular />
           </div>
         </div>
