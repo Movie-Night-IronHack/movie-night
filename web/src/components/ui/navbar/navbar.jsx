@@ -7,10 +7,10 @@ function NavBar() {
         <a className="navbar-brand">Search Movies & Series</a>
         <div className="d-flex align-items-center gap-2">
           <Link to="/" className="btn btn-light">
-            Home Page
+            Home
           </Link>
           <Link to="/watchlist" className="btn btn-light">
-            My Watch List
+            My Watchlist
           </Link>
         </div>
         <form className="d-flex align-items-center" role="search">

@@ -108,7 +108,7 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            {categoryName}
+            Filter {categoryName}
           </button>
 
           <ul className="dropdown-menu">
@@ -158,7 +158,6 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
         </div>
         {counter}/{page}/{selectedGenre}
       </div>
-      ;
     </>
   );
 }

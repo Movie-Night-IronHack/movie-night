@@ -3,6 +3,8 @@ import PageLayout from "../components/layouts/page-layout";
 import RenderCards from "../components/listCards/list-cards";
 import SideBar from "../components/sideBar/side-bar";
 import NavBar from "../components/ui/navbar/navbar";
+import NowPlaying from "../components/nowPlaying/now-playing";
+import Popular from "../components/popular/popular";
 
 function HomePage() {
   const [selectedGenre, setSelectedGenre] = useState(null);
@@ -17,10 +19,14 @@ function HomePage() {
       <PageLayout>
         <div className="d-flex gap-5">
           <SideBar />
-          <RenderCards
-            selectedGenre={selectedGenre}
-            onCategorySelect={handleCategorySelect}
-          />
+          <div className="flex-grow-1">
+            <RenderCards
+              selectedGenre={selectedGenre}
+              onCategorySelect={handleCategorySelect}
+            />
+            <NowPlaying />
+            <Popular />
+          </div>
         </div>
       </PageLayout>
     </>
