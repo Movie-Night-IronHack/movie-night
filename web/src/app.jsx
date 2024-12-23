@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 
 const HomePage = lazy(() => import("./pages/home-page"));
 const UserPage = lazy(() => import("./pages/user-page"));
+const SearchResults = lazy(() => import("./components/serachMovies/serach-movies.jsx"));
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/watchlist" element={<UserPage />} />
+          <Route path="/search" element={<SearchResults />} />
+
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </Suspense>
