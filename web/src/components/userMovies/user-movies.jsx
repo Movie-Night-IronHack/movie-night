@@ -18,7 +18,6 @@ function UserMovies({ className = "" }) {
   }, []);
 
   const handleDelete = (movie) => {
-    console.log("movie", movie);
     MovieApi.deleteUserMovie(movie.id)
       .then(() => {
         setUserMovieList((prevList) =>
@@ -43,4 +42,3 @@ function UserMovies({ className = "" }) {
 }
 
 export default UserMovies;
-

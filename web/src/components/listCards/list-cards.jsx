@@ -35,13 +35,11 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
   useEffect(() => {
     if (selectedGenre === null) {
       MovieApi.trendingMovies(page).then((movies) => {
-        // console.log(movies.total_pages);
         setMovieList(movies.results);
         setTotalPages(movies.total_pages);
       });
     } else {
       MovieApi.discoverMovies(selectedGenre, page).then((movies) => {
-        // console.log(movies.total_pages);
         setMovieList(movies.results);
         setTotalPages(movies.total_pages);
       });
@@ -128,7 +126,11 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
             ))}
           </ul>
         </div>
+
         <h2>{categoryName} Movies</h2>
+        <p>
+          Page: {page}/{Math.floor(totalPages / 4)}
+        </p>
         <div className={`d-flex flex-wrap gap-3 ${className}`}>
           {fiveMovies(counter).map((movie) => (
             <RenderCard
@@ -156,7 +158,6 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect }) {
             Next
           </button>
         </div>
-        {counter}/{page}/{selectedGenre}
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function NowPlaying(className = "") {
+function NowPlaying({ className = "" }) {
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [counter, setCounter] = useState(1);
@@ -68,6 +68,9 @@ function NowPlaying(className = "") {
   return (
     <>
       <h2>Now Playing</h2>
+      <p>
+        Page: {page}/{Math.floor(totalPages / 4)}
+      </p>
       <div className={`d-flex flex-wrap gap-3 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />

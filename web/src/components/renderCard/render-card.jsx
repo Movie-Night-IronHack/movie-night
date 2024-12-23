@@ -25,7 +25,7 @@ function RenderCard({ movie, onWatchList, onDelete }) {
             </button>
           )}
           <br />
-          <h6>vote: {movie.vote_average.toFixed(1)}</h6>
+          <p>Vote: {movie.vote_average.toFixed(1)}</p>
           {movie.release_date}
         </h5>
       </div>
