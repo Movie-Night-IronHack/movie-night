@@ -22,30 +22,28 @@ function SearchResults() {
     }
   }, [query]);
 
-    const handleWatch = (movie) => {
-      MovieApi.getUserMovies()
-        .then((userMovies) => {
-          const isAlreadyAdded = userMovies.some(
-            (userMovie) => userMovie.id === movie.id
-          );
-  
-          if (!isAlreadyAdded) {
-            MovieApi.addMovieUser(movie)
-              .then(() => {
-                setMovies((prevList) =>
-                  prevList.filter((m) => m.id !== movie.id)
-                );
-              })
-              .catch((error) => console.error("Error adding movie:", error));
-          } else {
-            console.log("Movie is already in the watchlist.");
-          }
-        })
-        .catch((error) => console.error("Error fetching user movies:", error));
-    };
-  
-  
-  
+  const handleWatch = (movie) => {
+    MovieApi.getUserMovies()
+      .then((userMovies) => {
+        const isAlreadyAdded = userMovies.some(
+          (userMovie) => userMovie.id === movie.id
+        );
+
+        if (!isAlreadyAdded) {
+          MovieApi.addMovieUser(movie)
+            .then(() => {
+              setMovies((prevList) =>
+                prevList.filter((m) => m.id !== movie.id)
+              );
+            })
+            .catch((error) => console.error("Error adding movie:", error));
+        } else {
+          console.log("Movie is already in the watchlist.");
+        }
+      })
+      .catch((error) => console.error("Error fetching user movies:", error));
+  };
+
   return (
     <>
       <NavBar />
@@ -54,7 +52,13 @@ function SearchResults() {
           <h2>Search Results for "{query}"</h2>
           <div className="d-flex flex-wrap gap-3">
             {movies.length > 0 ? (
-              movies.map((movie) => <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch}/>)
+              movies.map((movie) => (
+                <RenderCard
+                  key={movie.id}
+                  movie={movie}
+                  onWatchList={handleWatch}
+                />
+              ))
             ) : (
               <p>No results found.</p>
             )}

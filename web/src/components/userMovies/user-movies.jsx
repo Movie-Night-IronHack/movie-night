@@ -29,13 +29,45 @@ function UserMovies({ className = "" }) {
       );
   };
 
+  const handleFavorite = (movie) => {
+    MovieApi.getFavoriteMovies()
+      .then((favoriteMovies) => {
+        const isAlreadyAdded = favoriteMovies.some(
+          (favoriteMovie) => favoriteMovie.id === movie.id
+        );
+
+        if (!isAlreadyAdded) {
+          MovieApi.addFavoriteMovie(movie)
+            .then(() => {
+              setUserMovieList((prevList) =>
+                prevList.filter((m) => m.id !== movie.id)
+              );
+            })
+            .catch((error) => console.error("Error adding movie:", error));
+        } else {
+          console.log("Movie is already in the watchlist.");
+        }
+      })
+      .catch((error) => console.error("Error fetching user movies:", error));
+  };
+
   return (
     <>
-      <h2>My Movies</h2>
-      <div className={`d-flex flex-wrap gap-3 ${className}`}>
-        {userMovieList.map((movie) => (
-          <RenderCard key={movie.id} movie={movie} onDelete={handleDelete} />
-        ))}
+      <div>
+        <h2>Watchlist</h2>
+        <div className={`d-flex flex-wrap gap-3 ${className}`}>
+          {userMovieList.map((movie) => (
+            <RenderCard
+              key={movie.id}
+              movie={movie}
+              onDelete={handleDelete}
+              showFavoriteButton={true} // Show Favorite button
+              showWatchButton={false}
+              onHandleFavorite={handleFavorite}
+              
+            />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -73,4 +73,19 @@ const addMovieUser = (movie) =>
 
 const deleteUserMovie = (movieId) => userApi.delete(`/movies/${movieId}`);
 
-export { getUserMovies, addMovieUser, deleteUserMovie };
+const getFavoriteMovies = () => userApi.get("/favoriteMovies/");
+
+const deleteFavoriteMovie = (movieId) =>
+  userApi.delete(`/favoriteMovies/${movieId}`);
+
+const addFavoriteMovie = (movie) =>
+  userApi.post("/favoriteMovies/", { ...movie, id: movie.id.toString() });
+
+export {
+  getUserMovies,
+  addMovieUser,
+  deleteUserMovie,
+  getFavoriteMovies,
+  deleteFavoriteMovie,
+  addFavoriteMovie,
+};

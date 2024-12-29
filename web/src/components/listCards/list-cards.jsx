@@ -135,7 +135,7 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
 
         <h2>{categoryName} Movies</h2>
         <p>
-          Page: {page}/{Math.floor(totalPages / 4)}
+          Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
         </p>
         <div className={`d-flex flex-wrap gap-3 ${className}`}>
           {fiveMovies(counter).map((movie) => (

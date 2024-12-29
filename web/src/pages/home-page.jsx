@@ -25,6 +25,8 @@ function HomePage() {
               selectedGenre={selectedGenre}
               onCategorySelect={handleCategorySelect}
               nowPlayingMovies={nowPlayingMovies}
+              showFavoriteButton={false} // Hide Favorite button
+              showWatchButton={true}
             />
             <NowPlaying onFetchMovies={setNowPlayingMovies}/>
             <Popular />
