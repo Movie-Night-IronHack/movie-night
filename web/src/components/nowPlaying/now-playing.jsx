@@ -70,9 +70,9 @@ function NowPlaying({ className = "", onFetchMovies }) {
 
   return (
     <>
-      <h2>Now Playing</h2>
-      <p>
-        Page: {page}/{Math.floor(totalPages / 4)}
+      <h2 className="text-white">Now Playing</h2>
+      <p className="text-white">
+        Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
       </p>
       <div className={`d-flex flex-wrap gap-3 ${className}`}>
         {fiveMovies(counter).map((movie) => (

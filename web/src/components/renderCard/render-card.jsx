@@ -7,7 +7,7 @@ function RenderCard({
   showWatchButton = true,
 }) {
   return (
-    <div className="card event-item" style={{ width: "11rem" }}>
+    <div className="card event-item" style={{ width: "10.5rem" }}>
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         className="card-img-top"
@@ -44,8 +44,8 @@ function RenderCard({
             </button>
           )}
           <br />
-          <p>Vote: {movie.vote_average.toFixed(1)}</p>
-          {movie.release_date}
+          <p className="small mb-1">Vote: {movie.vote_average.toFixed(1)}</p>
+          <p className="small text-muted">{movie.release_date}</p>
         </h5>
       </div>
     </div>
