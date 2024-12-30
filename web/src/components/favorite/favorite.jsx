@@ -3,6 +3,7 @@ import PageLayout from "../layouts/page-layout";
 import NavBar from "../ui/navbar/navbar";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
+import { WhatsappShareButton } from "react-share";
 
 function Favorite({ className = "" }) {
   const [favoriteList, setFavoriteList] = useState([]);
@@ -36,13 +37,16 @@ function Favorite({ className = "" }) {
           <h2>Favorite</h2>
           <div className={`d-flex flex-wrap gap-3 ${className}`}>
             {favoriteList.map((movie) => (
-              <RenderCard
-                key={movie.id}
-                movie={movie}
-                onDelete={handleDelete}
-                showFavoriteButton={false} // Hide Favorite button
-                showWatchButton={false}
-              />
+              <>
+                <RenderCard
+                  key={movie.id}
+                  movie={movie}
+                  onDelete={handleDelete}
+                  showFavoriteButton={false} // Hide Favorite button
+                  showWatchButton={false}
+                />
+                {/* <WhatsappShareButton>Share WhatsApp</WhatsappShareButton> */}
+              </>
             ))}
           </div>
         </PageLayout>

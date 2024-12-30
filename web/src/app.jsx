@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Favorite from "./components/favorite/favorite.jsx";
+import MovieDetails from "./components/movieDetails/movie-details.jsx";
 
 const HomePage = lazy(() => import("./pages/home-page"));
 const UserPage = lazy(() => import("./pages/user-page"));
@@ -15,6 +16,7 @@ function App() {
           <Route path="/watchlist" element={<UserPage />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/details" element={<MovieDetails />} />
 
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
