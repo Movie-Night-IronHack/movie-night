@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import PageLayout from "../layouts/page-layout";
 import NavBar from "../ui/navbar/navbar";
 import * as MovieApi from "../../services/movie-api-service";
+import { useParams } from "react-router-dom";
 
-function MovieDetails({ movieId = "970450" }) {
+function MovieDetails() {
+  const { movieId } = useParams();
   const [movie, setMovie] = useState(null); // Initialize as null
   const [loading, setLoading] = useState(true); // Track loading state
   const [error, setError] = useState(null); // Track errors
@@ -67,21 +69,47 @@ function MovieDetails({ movieId = "970450" }) {
           />
           <div className="card event-item" style={{ width: "200rem" }}>
             <div className="card-body">
-              <h5 className="card-title mb-1 fw-light text-break"></h5>
+              <p className="card-title mb-1 text-break"><strong>Original Title:</strong> {movie.original_title}</p>
               <p className="text-muted">
                 <strong>Release Date:</strong> {movie.release_date}
               </p>
               <p className="text-muted">
                 <strong>Rating:</strong> {movie.vote_average.toFixed(1)}
               </p>
+
               <p className="text-muted">
-                <strong>Overview:</strong> {movie.overview}
+                <strong>Overview: </strong>
+                {movie.overview}
+              </p>
+
+              <p className="text-muted">
+                <strong>Homepage:</strong>{" "}
+                <a
+                  href={movie.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-info"
+                >
+                  {movie.homepage}
+                </a>
               </p>
               <p className="text-muted">
-                <strong>Homepage:</strong> {console.log(movie)}
+                <strong>Genres:</strong>{" "}
+                {movie.genres.map((genre, index) => (
+                  <span key={index}>{genre.name} / </span>
+                ))}
               </p>
               <p className="text-muted">
-                <strong>Genres:</strong> {console.log(movie.genres)}
+                <strong>Production Companies:</strong>{" "}
+                {movie.production_companies.map((company, index) => (
+                  <span key={index}>{company.name} / </span>
+                ))}
+              </p>
+              <p className="text-muted">
+                <strong>Production Countries:</strong>{" "}
+                {movie.production_countries.map((productionCountry, index) => (
+                  <span key={index}>{productionCountry.name} / </span>
+                ))}
               </p>
             </div>
 

@@ -28,8 +28,7 @@ function HomePage() {
               showFavoriteButton={false} // Hide Favorite button
               showWatchButton={true}
             />
-            <NowPlaying onFetchMovies={setNowPlayingMovies}/>
-            <Popular />
+            <NowPlaying onFetchMovies={setNowPlayingMovies} />
           </div>
         </div>
       </PageLayout>

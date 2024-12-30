@@ -16,7 +16,7 @@ function App() {
           <Route path="/watchlist" element={<UserPage />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/favorite" element={<Favorite />} />
-          <Route path="/details" element={<MovieDetails />} />
+          <Route path="/movie/:movieId" element={<MovieDetails />} />
 
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
