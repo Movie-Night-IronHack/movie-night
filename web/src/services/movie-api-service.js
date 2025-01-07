@@ -37,6 +37,12 @@ const discoverMovies = (genre, page = 1) =>
 const nowPlaying = (page = 1) =>
   https.get(`/3/movie/now_playing?language=en-US&page=${page}`, apiKey);
 
+const topRated = (page = 1) =>
+  https.get(`/3/movie/top_rated?language=en-US&page=${page}`, apiKey);
+
+const upcoming = (page = 1) =>
+  https.get(`/3/movie/upcoming?language=en-US&page=${page}`, apiKey);
+
 const popularMovies = (page = 1) =>
   https.get(`/3/movie/popular?language=en-US&page=${page}`, apiKey);
 
@@ -54,6 +60,8 @@ export {
   nowPlaying,
   popularMovies,
   getMovieVideos,
+  topRated,
+  upcoming,
 };
 
 // Consulta API de los usuarios
