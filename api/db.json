@@ -1,25 +1,257 @@
 {
   "movies": [
     {
-      "id": "1064213",
-      "backdrop_path": "/4cp40IyTpFfsT2IKpl0YlUkMBIR.jpg",
-      "title": "Anora",
-      "original_title": "Anora",
-      "overview": "A young sex worker from Brooklyn gets her chance at a Cinderella story when she meets and impulsively marries the son of an oligarch. Once the news reaches Russia, her fairytale is threatened as his parents set out to get the marriage annulled.",
-      "poster_path": "/7MrgIUeq0DD2iF7GR6wqJfYZNeC.jpg",
+      "id": "1184918",
+      "backdrop_path": "/9mJ9dxCGpudxyBtlC0M9Y4pTyXN.jpg",
+      "title": "The Wild Robot",
+      "original_title": "The Wild Robot",
+      "overview": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+      "poster_path": "/9w0Vh9eizfBXrcomiaFWTIPdboo.jpg",
       "media_type": "movie",
       "adult": false,
       "original_language": "en",
       "genre_ids": [
-        10749,
-        35,
-        18
+        16,
+        28,
+        878,
+        10751
       ],
-      "popularity": 493.355,
-      "release_date": "2024-10-14",
+      "popularity": 1063.664,
+      "release_date": "2024-09-08",
       "video": false,
-      "vote_average": 7.3,
-      "vote_count": 421
+      "vote_average": 8.384,
+      "vote_count": 3570
+    },
+    {
+      "id": "1082195",
+      "backdrop_path": "/5HlciYrJVOEtljDg2hn9KJHIIVz.jpg",
+      "title": "The Order",
+      "original_title": "The Order",
+      "overview": "A string of violent robberies in the Pacific Northwest leads a veteran FBI agent into a domestic terrorist plot to overthrow the federal government.",
+      "poster_path": "/1bJ2652AUnuK1WhlR0GLbJKVqMF.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "popularity": 204.334,
+      "release_date": "2024-12-05",
+      "video": false,
+      "vote_average": 6.88,
+      "vote_count": 50
+    },
+    {
+      "id": "98",
+      "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+      "title": "Gladiator",
+      "original_title": "Gladiator",
+      "overview": "After the death of Emperor Marcus Aurelius, his devious son takes power and demotes Maximus, one of Rome's most capable generals who Marcus preferred. Eventually, Maximus is forced to become a gladiator and battle to the death against other men for the amusement of paying audiences.",
+      "poster_path": "/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        28,
+        18,
+        12
+      ],
+      "popularity": 405.13,
+      "release_date": "2000-05-04",
+      "video": false,
+      "vote_average": 8.217,
+      "vote_count": 19000
+    },
+    {
+      "id": "1241982",
+      "adult": false,
+      "backdrop_path": "/tElnmtQ6yz1PjN1kePNl8yMSb59.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 3081.616,
+      "poster_path": "/m0SbwFNCa9epW1X60deLqTHiP7x.jpg",
+      "release_date": "2024-11-21",
+      "title": "Moana 2",
+      "video": false,
+      "vote_average": 6.967,
+      "vote_count": 646
+    },
+    {
+      "id": "1082195",
+      "backdrop_path": "/5HlciYrJVOEtljDg2hn9KJHIIVz.jpg",
+      "title": "The Order",
+      "original_title": "The Order",
+      "overview": "A string of violent robberies in the Pacific Northwest leads a veteran FBI agent into a domestic terrorist plot to overthrow the federal government.",
+      "poster_path": "/1bJ2652AUnuK1WhlR0GLbJKVqMF.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "popularity": 149.356,
+      "release_date": "2024-12-05",
+      "video": false,
+      "vote_average": 6.709,
+      "vote_count": 67
+    },
+    {
+      "id": "402431",
+      "adult": false,
+      "backdrop_path": "/uKb22E0nlzr914bA9KyA5CVCOlV.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        14
+      ],
+      "original_language": "en",
+      "original_title": "Wicked",
+      "overview": "In the land of Oz, ostracized and misunderstood green-skinned Elphaba is forced to share a room with the popular aristocrat Glinda at Shiz University, and the two's unlikely friendship is tested as they begin to fulfill their respective destinies as Glinda the Good and the Wicked Witch of the West.",
+      "popularity": 2943.848,
+      "poster_path": "/dfdvUzj4nLZpZ37BoefqvevCMI1.jpg",
+      "release_date": "2024-11-20",
+      "title": "Wicked",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 965
+    },
+    {
+      "id": "402431",
+      "backdrop_path": "/uKb22E0nlzr914bA9KyA5CVCOlV.jpg",
+      "title": "Wicked",
+      "original_title": "Wicked",
+      "overview": "In the land of Oz, ostracized and misunderstood green-skinned Elphaba is forced to share a room with the popular aristocrat Glinda at Shiz University, and the two's unlikely friendship is tested as they begin to fulfill their respective destinies as Glinda the Good and the Wicked Witch of the West.",
+      "poster_path": "/2E1x1qcHqGZcYuYi4PzVZjzg8IV.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        18,
+        10749,
+        14
+      ],
+      "popularity": 2606.28,
+      "release_date": "2024-11-20",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 1052
+    }
+  ],
+  "favoriteMovies": [
+    {
+      "id": "970450",
+      "backdrop_path": "/abSLxmkkXb3W2TXk8E9KbR7KQRj.jpg",
+      "title": "Werewolves",
+      "original_title": "Werewolves",
+      "overview": "A year after a supermoon’s light activated a dormant gene, transforming humans into bloodthirsty werewolves and causing nearly a billion deaths, the nightmare resurfaces as the supermoon rises again. Two scientists attempt to stop the mutation but fail, leaving those exposed to the moonlight to once again become feral werewolves. Chaos engulfs the streets as the scientists struggle to reach one of their family homes, now under siege by the savage creatures.",
+      "poster_path": "/elKf8Y5yi6Rl6teKsrQg0GAwaQD.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        28,
+        27,
+        53
+      ],
+      "popularity": 201.096,
+      "release_date": "2024-12-04",
+      "video": false,
+      "vote_average": 6.49,
+      "vote_count": 51
+    },
+    {
+      "id": "1184918",
+      "backdrop_path": "/9mJ9dxCGpudxyBtlC0M9Y4pTyXN.jpg",
+      "title": "The Wild Robot",
+      "original_title": "The Wild Robot",
+      "overview": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+      "poster_path": "/9w0Vh9eizfBXrcomiaFWTIPdboo.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        16,
+        28,
+        878,
+        10751
+      ],
+      "popularity": 1063.664,
+      "release_date": "2024-09-08",
+      "video": false,
+      "vote_average": 8.384,
+      "vote_count": 3570
+    },
+    {
+      "id": "1082195",
+      "backdrop_path": "/5HlciYrJVOEtljDg2hn9KJHIIVz.jpg",
+      "title": "The Order",
+      "original_title": "The Order",
+      "overview": "A string of violent robberies in the Pacific Northwest leads a veteran FBI agent into a domestic terrorist plot to overthrow the federal government.",
+      "poster_path": "/1bJ2652AUnuK1WhlR0GLbJKVqMF.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "popularity": 204.334,
+      "release_date": "2024-12-05",
+      "video": false,
+      "vote_average": 6.88,
+      "vote_count": 50
+    },
+    {
+      "id": "845781",
+      "adult": false,
+      "backdrop_path": "/cjEcqdRdPQJhYre3HUAc5538Gk8.jpg",
+      "genre_ids": [
+        28,
+        14,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Red One",
+      "overview": "After Santa Claus (codename: Red One) is kidnapped, the North Pole's Head of Security must team up with the world's most infamous tracker in a globe-trotting, action-packed mission to save Christmas.",
+      "popularity": 4760.061,
+      "poster_path": "/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
+      "release_date": "2024-10-31",
+      "title": "Red One",
+      "video": false,
+      "vote_average": 7.027,
+      "vote_count": 1532
+    },
+    {
+      "id": "402431",
+      "adult": false,
+      "backdrop_path": "/uKb22E0nlzr914bA9KyA5CVCOlV.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        14
+      ],
+      "original_language": "en",
+      "original_title": "Wicked",
+      "overview": "In the land of Oz, ostracized and misunderstood green-skinned Elphaba is forced to share a room with the popular aristocrat Glinda at Shiz University, and the two's unlikely friendship is tested as they begin to fulfill their respective destinies as Glinda the Good and the Wicked Witch of the West.",
+      "popularity": 2943.848,
+      "poster_path": "/dfdvUzj4nLZpZ37BoefqvevCMI1.jpg",
+      "release_date": "2024-11-20",
+      "title": "Wicked",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 965
     }
   ]
 }
