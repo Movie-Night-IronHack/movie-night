@@ -3,7 +3,7 @@ import PageLayout from "../layouts/page-layout";
 import NavBar from "../ui/navbar/navbar";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
-import { WhatsappShareButton } from "react-share";
+// import { WhatsappShareButton } from "react-share";
 
 function Favorite({ className = "" }) {
   const [favoriteList, setFavoriteList] = useState([]);
