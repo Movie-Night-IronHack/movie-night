@@ -69,8 +69,8 @@ function TopRated({ className = "", onFetchMovies }) {
   };
 
   return (
-    <>
-      <h2 className="text-white">Now Playing</h2>
+    <div className="border p-3 my-5">
+      <h2 className="text-black text-center">Top Rated</h2>
       <p className="text-white">
         Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
       </p>
@@ -97,7 +97,7 @@ function TopRated({ className = "", onFetchMovies }) {
           Next
         </button>
       </div>
-    </>
+    </div>
   );
 }
 export default TopRated;
