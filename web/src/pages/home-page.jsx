@@ -23,9 +23,9 @@ function HomePage() {
 
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <PageLayout>
-        <div className="d-flex gap-5">
+        <div className=" d-flex gap-5">
           <SideBar />
           <div className="flex-grow-1">
             <RenderCards

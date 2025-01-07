@@ -41,11 +41,11 @@ function Trailers({ movies }) {
 
   return (
     <div className="trailers mt-4">
-      <h3 className="text-black">Trailers (Now Playing)</h3>
+      <h3 className="text-white">Trailers (Now Playing)</h3>
       <div className="d-flex flex-wrap gap-2">
         {trailers.map((trailer) => (
           <div key={trailer.movieId} style={{ width: "300px" }}>
-            <h5 className="text-white">{trailer.title}</h5>
+            <h5 className="text-white text-center">{trailer.title}</h5>
             <Trailer videoId={trailer.trailerId} />
           </div>
         ))}

@@ -6,7 +6,7 @@ function Trailer({ videoId }) {
     return (
       <div
         className="d-flex justify-content-center align-items-center"
-        style={{ margin: "20px 0" }}
+        style={{ margin: "10px 0" }}
       >
         <div
           style={{

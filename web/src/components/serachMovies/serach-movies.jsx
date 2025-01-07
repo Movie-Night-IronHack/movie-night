@@ -48,7 +48,7 @@ function SearchResults() {
     <>
       <NavBar />
       <PageLayout>
-        <div className="container mt-4">
+        <div className="container">
           <h2>Search Results for "{query}"</h2>
           <div className="d-flex flex-wrap gap-3">
             {movies.length > 0 ? (

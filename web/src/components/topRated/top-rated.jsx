@@ -69,33 +69,37 @@ function TopRated({ className = "", onFetchMovies }) {
   };
 
   return (
-    <div className="border p-3 my-5">
-      <h2 className="text-black text-center">Top Rated</h2>
-      <p className="text-white">
-        Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
-      </p>
+    <div className="my-5">
+      <h2 className="text-white">Top Rated</h2>
       <div className={`d-flex flex-wrap gap-3 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
         ))}
       </div>
-      <div className="d-flex gap-2">
-        <button
-          type="button"
-          className="btn btn-secondary"
-          disabled={counter === 1 && page === 1 ? "disable" : ""}
-          onClick={() => handlePrevious()}
-        >
-          Previous
-        </button>
-        <button
-          type="button"
-          className="btn btn-secondary"
-          disabled={page > totalPages}
-          onClick={() => handleNext()}
-        >
-          Next
-        </button>
+      <div className="mt-2 d-flex gap-5 align-content-center">
+        <div className="col-4">
+          <button
+            type="button"
+            className="btn btn-secondary me-2"
+            disabled={counter === 1 && page === 1 ? "disable" : ""}
+            onClick={() => handlePrevious()}
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary me-5"
+            disabled={page > totalPages}
+            onClick={() => handleNext()}
+          >
+            Next
+          </button>
+        </div>
+        <div className="d-flex col-4">
+          <p className="text-white ps-5">
+            Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -69,17 +69,15 @@ function Upcoming({ className = "", onFetchMovies }) {
   };
 
   return (
-    <div className="border p-3">
-      <h2 className="text-black text-center">Upcoming</h2>
-      <p className="text-white">
-        Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
-      </p>
-      <div className={`d-flex flex-wrap gap-3 ${className}`}>
+    <div className="">
+      <h2 className="text-white">Upcoming</h2>
+   
+      <div className={`d-flex flex-wrap gap-3 mt-2 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
         ))}
       </div>
-      <div className="d-flex gap-2">
+      <div className="d-flex gap-2 mt-2">
         <button
           type="button"
           className="btn btn-secondary"
@@ -96,6 +94,9 @@ function Upcoming({ className = "", onFetchMovies }) {
         >
           Next
         </button>
+        <p className="text-black">
+        Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
+      </p>
       </div>
     </div>
   );

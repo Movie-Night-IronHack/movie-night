@@ -1,11 +1,10 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    /* background-image: url('./assets/web-app-background-image-2.webp');  Path to the image 
-    background-size: contain;  Ensure the image covers the full viewport 
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;*/
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("./assets/web-app-background-image-2.webp"); /*Path to the image*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}

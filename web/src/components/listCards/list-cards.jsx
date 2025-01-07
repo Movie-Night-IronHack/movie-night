@@ -132,11 +132,10 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
             ))}
           </ul>
         </div>
+        <br />
 
-        <h2>{categoryName} Movies</h2>
-        <p>
-          Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
-        </p>
+        <h2 className="text-white">{categoryName} Movies</h2>
+        
         <div className={`d-flex flex-wrap gap-3 ${className}`}>
           {fiveMovies(counter).map((movie) => (
             <RenderCard
@@ -146,7 +145,7 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
             />
           ))}
         </div>
-        <div className="d-flex gap-2">
+        <div className="d-flex gap-2 mt-2">
           <button
             type="button"
             className="btn btn-secondary"
@@ -163,6 +162,9 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
           >
             Next
           </button>
+          <p className="text-white">
+          Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
+        </p>
         </div>
       </div>
     </>
