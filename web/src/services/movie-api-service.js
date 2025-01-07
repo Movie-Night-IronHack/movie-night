@@ -40,6 +40,9 @@ const nowPlaying = (page = 1) =>
 const popularMovies = (page = 1) =>
   https.get(`/3/movie/popular?language=en-US&page=${page}`, apiKey);
 
+const getMovieVideos = (movieId) =>
+  https.get(`/3/movie/${movieId}/videos`, apiKey);
+
 // const searchMovies = () =>
 //   https.get(`/3/discover/movie?&with_genres=16`, apiKey);
 
@@ -50,6 +53,7 @@ export {
   discoverMovies,
   nowPlaying,
   popularMovies,
+  getMovieVideos,
 };
 
 // Consulta API de los usuarios

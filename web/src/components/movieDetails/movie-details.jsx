@@ -3,19 +3,32 @@ import PageLayout from "../layouts/page-layout";
 import NavBar from "../ui/navbar/navbar";
 import * as MovieApi from "../../services/movie-api-service";
 import { useParams } from "react-router-dom";
+import Trailer from "../trailer/trailer";
 
 function MovieDetails() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null); // Initialize as null
   const [loading, setLoading] = useState(true); // Track loading state
   const [error, setError] = useState(null); // Track errors
+  const [trailerId, setTrailerId] = useState(null);
 
   useEffect(() => {
     setLoading(true);
-    MovieApi.getMovieDetails(movieId)
-      .then((movie) => {
-        setMovie(movie);
+    Promise.all([
+      MovieApi.getMovieDetails(movieId),
+      MovieApi.getMovieVideos(movieId), // Fetch trailer data
+    ])
+      .then(([movieData, videoData]) => {
+        setMovie(movieData);
         setLoading(false);
+
+        // Find the first YouTube trailer video
+        const youtubeTrailer = videoData.results.find(
+          (video) => video.site === "YouTube" && video.type === "Trailer"
+        );
+        if (youtubeTrailer) {
+          setTrailerId(youtubeTrailer.key); // Set YouTube video ID
+        }
       })
       .catch((error) => {
         console.error("Error fetching movie details", error);
@@ -62,14 +75,19 @@ function MovieDetails() {
       <NavBar />
       <PageLayout>
         <div className="movie-details d-flex gap-4">
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt={movie.original_title}
-            style={{ width: "400px", borderRadius: "8px" }}
-          />
+          <div className="flex-shrink-0">
+            <img
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt={movie.original_title}
+              style={{ width: "500px", height: "auto", borderRadius: "8px" }}
+            />
+          </div>
+
           <div className="card event-item" style={{ width: "200rem" }}>
             <div className="card-body">
-              <p className="card-title mb-1 text-break"><strong>Original Title:</strong> {movie.original_title}</p>
+              <p className="card-title mb-1 text-break">
+                <strong>Original Title:</strong> {movie.original_title}
+              </p>
               <p className="text-muted">
                 <strong>Release Date:</strong> {movie.release_date}
               </p>
@@ -111,6 +129,8 @@ function MovieDetails() {
                   <span key={index}>{productionCountry.name} / </span>
                 ))}
               </p>
+
+              <Trailer videoId={trailerId} />
             </div>
 
             <p className="text-white">{movie.overview}</p>

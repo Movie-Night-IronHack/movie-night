@@ -4,11 +4,13 @@ import RenderCards from "../components/listCards/list-cards";
 import SideBar from "../components/sideBar/side-bar";
 import NavBar from "../components/ui/navbar/navbar";
 import NowPlaying from "../components/nowPlaying/now-playing";
-import Popular from "../components/popular/popular";
+import Trailers from "../components/trailer/trailers";
+
 
 function HomePage() {
   const [selectedGenre, setSelectedGenre] = useState(null);
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
+
 
   const handleCategorySelect = (genreId) => {
     setSelectedGenre(genreId);
@@ -29,6 +31,7 @@ function HomePage() {
               showWatchButton={true}
             />
             <NowPlaying onFetchMovies={setNowPlayingMovies} />
+            <Trailers movies={nowPlayingMovies} />
           </div>
         </div>
       </PageLayout>

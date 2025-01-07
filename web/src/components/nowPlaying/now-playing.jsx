@@ -11,12 +11,16 @@ function NowPlaying({ className = "", onFetchMovies }) {
   useEffect(() => {
     MovieApi.nowPlaying(page).then((movies) => {
       setNowPlayingMovies(movies.results);
-      if (onFetchMovies) {
-        onFetchMovies(movies.results);
-      }
       setTotalPages(movies.total_pages);
     });
   }, [page]);
+
+  useEffect(() => {
+
+    if (onFetchMovies) {
+      onFetchMovies(fiveMovies(counter));
+    }
+  }, [counter, nowPlayingMovies, onFetchMovies]);
 
   const fiveMovies = () => {
     switch (counter) {
