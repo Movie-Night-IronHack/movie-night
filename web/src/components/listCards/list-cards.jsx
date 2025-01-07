@@ -162,7 +162,7 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
           >
             Next
           </button>
-          <p className="text-white">
+          <p className="text-white pt-2">
           Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
         </p>
         </div>

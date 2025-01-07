@@ -15,7 +15,7 @@ function NavBar() {
   return (
     <nav className="navbar bg-body-tertiary fixed-top">
       <div className="container d-flex align-items-center justify-content-between">
-        <a className="navbar-brand">Search Movies & Series</a>
+        <a className="navbar-brand">Search Movies</a>
         <div className="d-flex align-items-center gap-2">
           <Link to="/" className="btn btn-light">
             Home

@@ -76,11 +76,11 @@ function TopRated({ className = "", onFetchMovies }) {
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
         ))}
       </div>
-      <div className="mt-2 d-flex gap-5 align-content-center">
-        <div className="col-4">
+      <div className="mt-2 d-flex gap-2 ">
+        <div>
           <button
             type="button"
-            className="btn btn-secondary me-2"
+            className="btn btn-secondary "
             disabled={counter === 1 && page === 1 ? "disable" : ""}
             onClick={() => handlePrevious()}
           >
@@ -88,15 +88,15 @@ function TopRated({ className = "", onFetchMovies }) {
           </button>
           <button
             type="button"
-            className="btn btn-secondary me-5"
+            className="btn btn-secondary"
             disabled={page > totalPages}
             onClick={() => handleNext()}
           >
             Next
           </button>
         </div>
-        <div className="d-flex col-4">
-          <p className="text-white ps-5">
+        <div>
+          <p className="text-white pt-2">
             Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
           </p>
         </div>

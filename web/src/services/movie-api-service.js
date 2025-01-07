@@ -41,7 +41,7 @@ const topRated = (page = 1) =>
   https.get(`/3/movie/top_rated?language=en-US&page=${page}`, apiKey);
 
 const upcoming = (page = 1) =>
-  https.get(`/3/movie/upcoming?language=en-US&page=${page}`, apiKey);
+  https.get(`/3/movie/upcoming?page=${page}`, apiKey);
 
 const popularMovies = (page = 1) =>
   https.get(`/3/movie/popular?language=en-US&page=${page}`, apiKey);

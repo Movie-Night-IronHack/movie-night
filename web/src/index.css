@@ -8,3 +8,8 @@ body {
   background-position: center;
   height: 100vh;
 }
+
+.hr-white {
+  height: "20px";
+  background-color: "white";
+}

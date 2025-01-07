@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function Upcoming({ className = "", onFetchMovies }) {
+function Upcoming({ className = "" }) {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [counter, setCounter] = useState(1);
@@ -11,9 +11,6 @@ function Upcoming({ className = "", onFetchMovies }) {
   useEffect(() => {
     MovieApi.upcoming(page).then((movies) => {
       setUpcomingMovies(movies.results);
-      if (onFetchMovies) {
-        onFetchMovies(movies.results);
-      }
       setTotalPages(movies.total_pages);
     });
   }, [page]);
@@ -71,7 +68,7 @@ function Upcoming({ className = "", onFetchMovies }) {
   return (
     <div className="">
       <h2 className="text-white">Upcoming</h2>
-   
+
       <div className={`d-flex flex-wrap gap-3 mt-2 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
@@ -94,9 +91,9 @@ function Upcoming({ className = "", onFetchMovies }) {
         >
           Next
         </button>
-        <p className="text-black">
-        Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
-      </p>
+        <p className="text-black pt-2">
+          Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
+        </p>
       </div>
     </div>
   );

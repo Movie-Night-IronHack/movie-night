@@ -16,7 +16,6 @@ function NowPlaying({ className = "", onFetchMovies }) {
   }, [page]);
 
   useEffect(() => {
-
     if (onFetchMovies) {
       onFetchMovies(fiveMovies(counter));
     }
@@ -75,32 +74,35 @@ function NowPlaying({ className = "", onFetchMovies }) {
   return (
     <>
       <h2 className="text-white">Now Playing</h2>
-     
       <div className={`d-flex flex-wrap gap-3 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
         ))}
       </div>
       <div className="d-flex gap-2 mt-2">
-        <button
-          type="button"
-          className="btn btn-secondary"
-          disabled={counter === 1 && page === 1 ? "disable" : ""}
-          onClick={() => handlePrevious()}
-        >
-          Previous
-        </button>
-        <button
-          type="button"
-          className="btn btn-secondary"
-          disabled={page > totalPages}
-          onClick={() => handleNext()}
-        >
-          Next
-        </button>
-        <p className="text-white">
-        Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
-      </p>
+        <div>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            disabled={counter === 1 && page === 1 ? "disable" : ""}
+            onClick={() => handlePrevious()}
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            disabled={page > totalPages}
+            onClick={() => handleNext()}
+          >
+            Next
+          </button>
+        </div>
+        <div>
+          <p className="text-white pt-2">
+            Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
+          </p>
+        </div>
       </div>
     </>
   );
