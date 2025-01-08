@@ -1,0 +1,9 @@
+.sidebar-a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-a:hover{
+  color: yellowgreen;
+}
