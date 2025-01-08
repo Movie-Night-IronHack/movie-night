@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Favorite from "./components/favorite/favorite.jsx";
 import MovieDetails from "./components/movieDetails/movie-details.jsx";
-import MovieDetails2 from "./components/movieDetails2/movie-details2.jsx";
 
 const HomePage = lazy(() => import("./pages/home-page"));
 const UserPage = lazy(() => import("./pages/user-page"));
@@ -18,8 +17,6 @@ function App() {
           <Route path="/search" element={<SearchResults />} />
           <Route path="/favorite" element={<Favorite />} />
           <Route path="/movie/:movieId" element={<MovieDetails />} />
-          <Route path="/movie2/:movieId" element={<MovieDetails2 />} />
-
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </Suspense>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PageLayout from "../components/layouts/page-layout";
 import RenderCards from "../components/listCards/list-cards";
-import SideBar from "../components/sideBar/side-bar";
+import SideBar from "../components/sidebar/side-bar";
 import NavBar from "../components/ui/navbar/navbar";
 import NowPlaying from "../components/nowPlaying/now-playing";
 import Trailers from "../components/trailer/trailers";
@@ -23,9 +23,11 @@ function HomePage() {
     <>
       <NavBar />
       <PageLayout>
-        <div className=" d-flex gap-5">
-          <SideBar />
-          <div className="flex-grow-1">
+        <div className=" d-flex">
+          <div className="position-fixed">
+            <SideBar />
+          </div>
+          <div style={{marginLeft: "15vw"}}>
             <RenderCards
               selectedGenre={selectedGenre}
               onCategorySelect={handleCategorySelect}
@@ -38,7 +40,9 @@ function HomePage() {
             <hr
               style={{
                 height: "10px", // Adjust thickness
-                backgroundColor: "white", // Ensure color matches
+                backgroundColor: "#FFFFFF", // Ensure color matches
+                opacity: "1",
+                border: "none",
               }}
             />
 
@@ -46,21 +50,27 @@ function HomePage() {
             <hr
               style={{
                 height: "10px", // Adjust thickness
-                backgroundColor: "white", // Ensure color matches
+                backgroundColor: "#FFFFFF", // Ensure color matches
+                opacity: "1",
+                border: "none",
               }}
             />
             <Trailers movies={nowPlayingMovies} />
             <hr
               style={{
                 height: "10px", // Adjust thickness
-                backgroundColor: "white", // Ensure color matches
+                backgroundColor: "#FFFFFF", // Ensure color matches
+                opacity: "1",
+                border: "none",
               }}
             />
             <TopRated onFetchMovies={setTopRatedMovies} />
             <hr
               style={{
                 height: "10px", // Adjust thickness
-                backgroundColor: "white", // Ensure color matches
+                backgroundColor: "#FFFFFF", // Ensure color matches
+                opacity: "1",
+                border: "none",
               }}
             />
             <Upcoming onFetchMovies={setUpcomingMovies} />

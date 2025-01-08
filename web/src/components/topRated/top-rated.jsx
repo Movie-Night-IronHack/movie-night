@@ -69,8 +69,8 @@ function TopRated({ className = "", onFetchMovies }) {
   };
 
   return (
-    <div className="my-5">
-      <h2 className="text-white">Top Rated</h2>
+    <div id="top-rated" className="my-5">
+      <h2  className="text-white">Top Rated</h2>
       <div className={`d-flex flex-wrap gap-3 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />

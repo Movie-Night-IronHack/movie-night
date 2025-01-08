@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayingMovies = [] }) {
+function ListCards({ className = "", selectedGenre, onCategorySelect, nowPlayingMovies = [] }) {
   const [movieList, setMovieList] = useState([]);
   const [counter, setCounter] = useState(1);
   const [page, setPage] = useState(1);
@@ -50,7 +50,7 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
         setTotalPages(movies.total_pages);
       });
     }
-  }, [selectedGenre, nowPlayingMovies,page]);
+  }, [selectedGenre, nowPlayingMovies, page]);
 
   const handleWatch = (movie) => {
     MovieApi.getUserMovies()
@@ -104,38 +104,40 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
 
   return (
     <>
-      <div>
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Filter {categoryName}
-          </button>
+      <div id="trending">
+        <div className="d-flex mb-3">
+          <div className="me-auto">
+            <h2 className="text-white">{categoryName} Movies</h2>
+          </div>
+          <div className="dropdown me-5 pt-2">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Filter {categoryName}
+            </button>
 
-          <ul className="dropdown-menu">
-            {categories.map((category) => (
-              <li key={category.name}>
-                <button
-                  className="dropdown-item"
-                  type="button"
-                  onClick={() => {
-                    onCategorySelect(category.id);
-                    setCategoryName(category.name);
-                  }}
-                >
-                  {category.name}
-                </button>
-              </li>
-            ))}
-          </ul>
+            <ul className="dropdown-menu">
+              {categories.map((category) => (
+                <li key={category.name}>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => {
+                      onCategorySelect(category.id);
+                      setCategoryName(category.name);
+                    }}
+                  >
+                    {category.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <br />
 
-        <h2 className="text-white">{categoryName} Movies</h2>
-        
         <div className={`d-flex flex-wrap gap-3 ${className}`}>
           {fiveMovies(counter).map((movie) => (
             <RenderCard
@@ -163,11 +165,11 @@ function RenderCards({ className = "", selectedGenre, onCategorySelect, nowPlayi
             Next
           </button>
           <p className="text-white pt-2">
-          Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
-        </p>
+            Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
+          </p>
         </div>
       </div>
     </>
   );
 }
-export default RenderCards;
+export default ListCards;

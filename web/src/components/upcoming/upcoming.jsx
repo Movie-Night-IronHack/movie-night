@@ -66,9 +66,8 @@ function Upcoming({ className = "" }) {
   };
 
   return (
-    <div className="">
+    <div id="upcoming">
       <h2 className="text-white">Upcoming</h2>
-
       <div className={`d-flex flex-wrap gap-3 mt-2 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
@@ -91,7 +90,7 @@ function Upcoming({ className = "" }) {
         >
           Next
         </button>
-        <p className="text-black pt-2">
+        <p className="text-white pt-2">
           Page: {page}/{Math.floor(totalPages / 4)}, Display: {counter}/4
         </p>
       </div>
