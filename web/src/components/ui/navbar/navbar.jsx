@@ -15,7 +15,10 @@ function NavBar() {
   return (
     <nav className="navbar bg-body-tertiary fixed-top">
       <div className="container d-flex align-items-center justify-content-between">
-        <a className="navbar-brand">Search Movies</a>
+        <div>
+          <img src="/claqueta.png" alt="home icon" width="30px" className="pb-2"/>
+          <a className="navbar-brand ps-2">Search Movies</a>
+        </div>
         <div className="d-flex align-items-center gap-2">
           <Link to="/" className="btn btn-light">
             Home
