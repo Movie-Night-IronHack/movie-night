@@ -67,13 +67,13 @@ function Upcoming({ className = "" }) {
 
   return (
     <div id="upcoming">
-      <h2 className="text-white">Upcoming</h2>
+      <h2 className="text-white mb-5">Upcoming</h2>
       <div className={`d-flex flex-wrap gap-3 mt-2 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
         ))}
       </div>
-      <div className="d-flex gap-2 mt-2">
+      <div className="d-flex gap-2 mt-5">
         <button
           type="button"
           className="btn btn-secondary"

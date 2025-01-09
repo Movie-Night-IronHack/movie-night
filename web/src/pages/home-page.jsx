@@ -39,6 +39,7 @@ function HomePage() {
             />
             <hr
               style={{
+                marginBottom : "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -49,6 +50,7 @@ function HomePage() {
             <NowPlaying onFetchMovies={setNowPlayingMovies} />
             <hr
               style={{
+                marginBottom : "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -58,6 +60,7 @@ function HomePage() {
             <Trailers movies={nowPlayingMovies} />
             <hr
               style={{
+                marginBottom : "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -67,6 +70,7 @@ function HomePage() {
             <TopRated onFetchMovies={setTopRatedMovies} />
             <hr
               style={{
+                marginBottom : "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",

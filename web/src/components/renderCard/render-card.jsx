@@ -42,14 +42,14 @@ function RenderCard({
           {/* Render the Watch button if showWatchButton is true */}
           {showWatchButton && (
             <button
-              className="btn btn-sm btn-success"
+              className="mb-2 ms-5 btn btn-sm btn-success"
               onClick={() => onWatchList(movie)}
             >
               Watch
             </button>
           )}
           <br />
-          <p className="small mb-1">
+          <p className="small mb-2 ms-4 ps-3">
             <span className="ms-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ function RenderCard({
             </span>
             : {movie.vote_average.toFixed(1)}
           </p>
-          <p className="small text-muted">{movie.release_date}</p>
+          <p className="small text-muted ms-4 ps-2">{movie.release_date}</p>
         </h5>
       </div>
     </div>
