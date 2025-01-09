@@ -105,7 +105,7 @@ function ListCards({ className = "", selectedGenre, onCategorySelect, nowPlaying
   return (
     <>
       <div id="trending">
-        <div className="d-flex mb-3">
+        <div className="d-flex mb-4">
           <div className="me-auto">
             <h2 className="text-white">{categoryName} Movies</h2>
           </div>
@@ -147,7 +147,7 @@ function ListCards({ className = "", selectedGenre, onCategorySelect, nowPlaying
             />
           ))}
         </div>
-        <div className="d-flex gap-2 mt-2">
+        <div className="d-flex gap-2 my-5">
           <button
             type="button"
             className="btn btn-secondary"

@@ -40,8 +40,8 @@ function Trailers({ movies }) {
   }, [movies]);
 
   return (
-    <div className="trailers mt-4">
-      <h3 className="text-white">Trailers (Now Playing)</h3>
+    <div className="trailers mt-4 mb-5">
+      <h3 className="text-white mb-5">Trailers (Now Playing)</h3>
       <div className="d-flex flex-wrap gap-2">
         {trailers.map((trailer) => (
           <div key={trailer.movieId} style={{ width: "300px" }}>

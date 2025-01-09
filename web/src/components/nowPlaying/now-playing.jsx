@@ -73,13 +73,13 @@ function NowPlaying({ className = "", onFetchMovies }) {
 
   return (
     <div id="now-playing">
-      <h2 className="text-white">Now Playing</h2>
-      <div className={`d-flex flex-wrap gap-3 ${className}`}>
+      <h2 className="text-white mb-5">Now Playing</h2>
+      <div className={`d-flex flex-wrap gap-3 mb-5 ${className}`}>
         {fiveMovies(counter).map((movie) => (
           <RenderCard key={movie.id} movie={movie} onWatchList={handleWatch} />
         ))}
       </div>
-      <div className="d-flex gap-2 mt-2">
+      <div className="d-flex gap-2 mt-2 mb-5">
         <div>
           <button
             type="button"
