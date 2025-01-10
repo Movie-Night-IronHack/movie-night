@@ -54,7 +54,7 @@ function UserMovies({ className = "" }) {
   return (
     <>
       <div>
-        <h2>Watchlist</h2>
+        <h2 className="text-white my-5">Watchlist</h2>
         <div className={`d-flex flex-wrap gap-3 ${className}`}>
           {userMovieList.map((movie) => (
             <RenderCard

@@ -13,7 +13,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="navbar bg-body-tertiary fixed-top">
+    <nav className="navbar bg-dark-subtle fixed-top">
       <div className="container d-flex align-items-center justify-content-between">
         <div>
           <img src="/claqueta.png" alt="home icon" width="30px" className="pb-2"/>

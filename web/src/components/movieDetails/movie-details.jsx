@@ -101,7 +101,7 @@ function MovieDetails() {
               </p>
 
               <p className="text-muted">
-                <strong>Homepage:</strong>{" "}
+                <strong>Homepage: </strong>
                 <a
                   href={movie.homepage}
                   target="_blank"
@@ -112,9 +112,9 @@ function MovieDetails() {
                 </a>
               </p>
               <p className="text-muted">
-                <strong>Genres:</strong>{" "}
+                <strong>Genres: </strong>
                 {movie.genres.map((genre, index) => (
-                  <span key={index}>{genre.name} / </span>
+                  <span key={index}>{genre.name} {movie.genres.length > 0 && index < movie.genres.length -1 ? '/':''} </span>
                 ))}
               </p>
               <p className="text-muted">

@@ -34,7 +34,7 @@ function Favorite({ className = "" }) {
       <NavBar />
       <div className={`container mt-4 ${className}`}>
         <PageLayout>
-          <h2>Favorite</h2>
+          <h2 className="text-white my-5">Favorite</h2>
           <div className={`d-flex flex-wrap gap-3 ${className}`}>
             {favoriteList.map((movie) => (
               <>

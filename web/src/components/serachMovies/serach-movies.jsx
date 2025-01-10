@@ -49,7 +49,7 @@ function SearchResults() {
       <NavBar />
       <PageLayout>
         <div className="container">
-          <h2>Search Results for "{query}"</h2>
+          <h2 className="text-white">Search Results for &quot;{query}&quot;</h2>
           <div className="d-flex flex-wrap gap-3">
             {movies.length > 0 ? (
               movies.map((movie) => (
@@ -60,7 +60,7 @@ function SearchResults() {
                 />
               ))
             ) : (
-              <p>No results found.</p>
+              <p className="text-white">No results found.</p>
             )}
           </div>
         </div>
