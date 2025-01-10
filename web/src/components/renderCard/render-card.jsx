@@ -22,7 +22,7 @@ function RenderCard({
         <h5 className="card-title mb-1 fw-light text-break">
           {onDelete && (
             <button
-              className="btn btn-sm btn-danger me-1"
+              className={`btn btn-sm btn-danger mb-3 ${showFavoriteButton ? '': 'ms-5'}`}
               onClick={() => onDelete(movie)}
             >
               Remove
@@ -32,7 +32,7 @@ function RenderCard({
           {/* Render the Favorite button if showFavoriteButton is true */}
           {showFavoriteButton && (
             <button
-              className="btn btn-sm btn-warning me-1"
+              className="btn btn-sm btn-warning me-1 ms-2 mb-3"
               onClick={() => onHandleFavorite(movie)}
             >
               Favorite
