@@ -9,7 +9,7 @@ function RenderCard({
   showWatchButton = true,
 }) {
   return (
-    <div className="card event-item" style={{ width: "12rem" }}>
+    <div className="card event-item hover-shadow" style={{ width: "12rem" }}>
       <Link to={`/movie/${movie.id}`}>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
