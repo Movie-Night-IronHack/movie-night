@@ -11,7 +11,7 @@ function Trailer({ videoId }) {
         <div
           style={{
             position: "relative",
-            width: "80%", // Adjust width as needed
+            width: "100%", // Adjust width as needed
             maxWidth: "560px", // Max width for desktop
             paddingBottom: "56.25%", // 16:9 aspect ratio (100% * 9 / 16)
             height: 0,

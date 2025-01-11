@@ -151,12 +151,11 @@ function MovieDetails() {
                   <span key={index}>{productionCountry.name} / </span>
                 ))}
               </p>
-
-              <Trailer videoId={trailerId} />
+              <div className="container col-4">
+                <Trailer videoId={trailerId} />
+              </div>
             </div>
-            <div
-              className="d-flex justify-content-center gap-2 pb-3"
-            >
+            <div className="d-flex justify-content-center gap-2 pb-3">
               <div>
                 <WhatsappShareButton
                   url={`http://localhost:5173/movie/${movieId}`}
