@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import * as MovieApi from "../../services/movie-api-service";
 import RenderCard from "../renderCard/render-card";
 
-function ListCards({ className = "", selectedGenre, onCategorySelect, nowPlayingMovies = [] }) {
+function ListCards({
+  className = "",
+  selectedGenre,
+  onCategorySelect,
+  nowPlayingMovies = [],
+}) {
   const [movieList, setMovieList] = useState([]);
   const [counter, setCounter] = useState(1);
   const [page, setPage] = useState(1);
@@ -104,12 +109,12 @@ function ListCards({ className = "", selectedGenre, onCategorySelect, nowPlaying
 
   return (
     <>
-      <div id="trending">
+      <div>
         <div className="d-flex mb-4">
-          <div className="me-auto">
+          <div className="me-5">
             <h2 className="text-white">{categoryName} Movies</h2>
           </div>
-          <div className="dropdown me-5 pt-2">
+          <div className="dropdown">
             <button
               className="btn btn-secondary dropdown-toggle"
               type="button"

@@ -167,26 +167,6 @@
       "video": false,
       "vote_average": 7.179,
       "vote_count": 488
-    },
-    {
-      "id": "1151949",
-      "adult": false,
-      "backdrop_path": "/2m6DFZSfOl7VoQxsCVZnthMD2nB.jpg",
-      "genre_ids": [
-        28,
-        80,
-        53
-      ],
-      "original_language": "id",
-      "original_title": "The Shadow Strays",
-      "overview": "Skilled in the art of killing, a young assassin defies her mentor to save a boy from a ruthless crime syndicate — and she'll destroy anyone in her path.",
-      "popularity": 188.301,
-      "poster_path": "/cfkcrKySRyJiIdLo6c6kNSyLFh7.jpg",
-      "release_date": "2024-09-10",
-      "title": "The Shadow Strays",
-      "video": false,
-      "vote_average": 7.3,
-      "vote_count": 191
     }
   ],
   "favoriteMovies": [

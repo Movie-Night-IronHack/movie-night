@@ -69,7 +69,7 @@ function TopRated({ className = "", onFetchMovies }) {
   };
 
   return (
-    <div id="top-rated" className="my-5">
+    <div id="top-rated" className="">
       <h2  className="text-white mb-5">Top Rated</h2>
       <div className={`d-flex flex-wrap gap-3 ${className}`}>
         {fiveMovies(counter).map((movie) => (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PageLayout from "../components/layouts/page-layout";
-import RenderCards from "../components/listCards/list-cards";
+import ListCards from "../components/listCards/list-cards";
 import SideBar from "../components/sidebar/side-bar";
 import NavBar from "../components/ui/navbar/navbar";
 import NowPlaying from "../components/nowPlaying/now-playing";
@@ -20,15 +20,15 @@ function HomePage() {
   };
 
   return (
-    <>
+    <div id="list-cards">
       <NavBar />
       <PageLayout>
-        <div className=" d-flex">
+        <div className="d-flex">
           <div className="position-fixed">
             <SideBar />
           </div>
-          <div style={{marginLeft: "15vw"}}>
-            <RenderCards
+          <div style={{ marginLeft: "15vw" }}>
+            <ListCards
               selectedGenre={selectedGenre}
               onCategorySelect={handleCategorySelect}
               nowPlayingMovies={nowPlayingMovies}
@@ -38,8 +38,9 @@ function HomePage() {
               showWatchButton={true}
             />
             <hr
+              id="now-playing"
               style={{
-                marginBottom : "50px",
+                marginBottom: "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -50,7 +51,7 @@ function HomePage() {
             <NowPlaying onFetchMovies={setNowPlayingMovies} />
             <hr
               style={{
-                marginBottom : "50px",
+                marginBottom: "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -59,8 +60,9 @@ function HomePage() {
             />
             <Trailers movies={nowPlayingMovies} />
             <hr
+              id="top-rated"
               style={{
-                marginBottom : "50px",
+                marginBottom: "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -70,7 +72,7 @@ function HomePage() {
             <TopRated onFetchMovies={setTopRatedMovies} />
             <hr
               style={{
-                marginBottom : "50px",
+                marginBottom: "50px",
                 height: "10px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
@@ -81,7 +83,7 @@ function HomePage() {
           </div>
         </div>
       </PageLayout>
-    </>
+    </div>
   );
 }
 

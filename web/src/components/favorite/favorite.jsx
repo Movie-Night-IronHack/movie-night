@@ -42,8 +42,9 @@ function Favorite({ className = "" }) {
                   key={movie.id}
                   movie={movie}
                   onDelete={handleDelete}
-                  showFavoriteButton={false} // Hide Favorite button
+                  showFavoriteButton={false}
                   showWatchButton={false}
+                  showWhatsAppButton={true}
                 />
                 {/* <WhatsappShareButton>Share WhatsApp</WhatsappShareButton> */}
               </>

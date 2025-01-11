@@ -1,13 +1,31 @@
-import "./side-bar.css"
+import "./side-bar.css";
 
 function SideBar() {
   return (
-    <div className="d-flex flex-column text-white" style={{ minWidth: "200px" }}>
-      <h2 className="fs-1">Side Bar</h2>
-      <a href="#trending" className="fs-3 mt-5 sidebar-a">Trending</a>
-      <a href="#now-playing" className="fs-3 mt-5 sidebar-a">Now Playing</a>
-      <a href="#top-rated" className="fs-3 mt-5 sidebar-a">Top Rated</a>
-      <a href="#upcoming" className="fs-3 mt-5 sidebar-a">Upcoming</a>
+    <div
+      className="d-flex flex-column text-white"
+      style={{ minWidth: "100px" }}
+    >
+      <button className="btn mt-3 btn-sm bg-light rounded">
+        <a href="#list-cards" className="fs-5 sidebar-a text-black">
+          Trending
+        </a>
+      </button>
+      <button className="btn mt-3 btn-sm">
+        <a href="#now-playing" className="fs-5 sidebar-a">
+          Now Playing
+        </a>
+      </button>
+      <button className="btn mt-3 btn-sm bg-light rounded">
+        <a href="#top-rated" className="fs-5 sidebar-a text-black">
+          Top Rated
+        </a>
+      </button>
+      <button className="btn mt-3 btn-sm ">
+        <a href="#upcoming" className="fs-5 sidebar-a">
+          Upcoming
+        </a>
+      </button>
     </div>
   );
 }

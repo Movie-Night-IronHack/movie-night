@@ -72,7 +72,7 @@ function NowPlaying({ className = "", onFetchMovies }) {
   };
 
   return (
-    <div id="now-playing">
+    <div>
       <h2 className="text-white mb-5">Now Playing</h2>
       <div className={`d-flex flex-wrap gap-3 mb-5 ${className}`}>
         {fiveMovies(counter).map((movie) => (
