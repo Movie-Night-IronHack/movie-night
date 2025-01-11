@@ -22,12 +22,12 @@ function HomePage() {
   return (
     <div id="list-cards">
       <NavBar />
+      <SideBar />
       <PageLayout>
-        <div className="d-flex">
-          <div className="position-fixed">
-            <SideBar />
-          </div>
-          <div style={{ marginLeft: "15vw" }}>
+        <div>
+                    
+          <div style={{ marginLeft: "20%", marginTop:"8vh", marginRight:"26%"}}>
+         
             <ListCards
               selectedGenre={selectedGenre}
               onCategorySelect={handleCategorySelect}
@@ -41,7 +41,7 @@ function HomePage() {
               id="now-playing"
               style={{
                 marginBottom: "50px",
-                height: "10px", // Adjust thickness
+                height: "5px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
                 border: "none",
@@ -52,7 +52,7 @@ function HomePage() {
             <hr
               style={{
                 marginBottom: "50px",
-                height: "10px", // Adjust thickness
+                height: "5px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
                 border: "none",
@@ -63,7 +63,7 @@ function HomePage() {
               id="top-rated"
               style={{
                 marginBottom: "50px",
-                height: "10px", // Adjust thickness
+                height: "5px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
                 border: "none",
@@ -73,7 +73,7 @@ function HomePage() {
             <hr
               style={{
                 marginBottom: "50px",
-                height: "10px", // Adjust thickness
+                height: "5px", // Adjust thickness
                 backgroundColor: "#FFFFFF", // Ensure color matches
                 opacity: "1",
                 border: "none",

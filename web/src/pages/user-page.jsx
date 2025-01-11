@@ -7,7 +7,7 @@ function UserPage() {
     <>
       <NavBar />
       <PageLayout>
-        <div className="d-flex gap-5">
+        <div className="d-flex gap-5 justify-content-center">
           <div className="mt-3"></div>
           <UserMovies />
         </div>

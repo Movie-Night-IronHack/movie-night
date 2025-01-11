@@ -1,6 +1,6 @@
 function Trailer({ videoId }) {
     if (!videoId) {
-      return <p className="text-muted">Trailer not available</p>;
+      return <p className="text-muted ">Trailer not available</p>;
     }
   
     return (

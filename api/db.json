@@ -23,27 +23,6 @@
       "vote_count": 3570
     },
     {
-      "id": "1082195",
-      "backdrop_path": "/5HlciYrJVOEtljDg2hn9KJHIIVz.jpg",
-      "title": "The Order",
-      "original_title": "The Order",
-      "overview": "A string of violent robberies in the Pacific Northwest leads a veteran FBI agent into a domestic terrorist plot to overthrow the federal government.",
-      "poster_path": "/1bJ2652AUnuK1WhlR0GLbJKVqMF.jpg",
-      "media_type": "movie",
-      "adult": false,
-      "original_language": "en",
-      "genre_ids": [
-        80,
-        18,
-        53
-      ],
-      "popularity": 204.334,
-      "release_date": "2024-12-05",
-      "video": false,
-      "vote_average": 6.88,
-      "vote_count": 50
-    },
-    {
       "id": "98",
       "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
       "title": "Gladiator",
@@ -146,27 +125,6 @@
       "video": false,
       "vote_average": 7.4,
       "vote_count": 1052
-    },
-    {
-      "id": "820446",
-      "adult": false,
-      "backdrop_path": "/nBHKT3pm5DmidZd5VS4bD5Hc2S3.jpg",
-      "genre_ids": [
-        18,
-        10749,
-        36,
-        9648
-      ],
-      "original_language": "en",
-      "original_title": "Downton Abbey: A New Era",
-      "overview": "The Crawley family goes on a grand journey to the south of France to uncover the mystery of the dowager countess's newly inherited villa. Meanwhile, a Hollywood director seeks to film his latest production at Downton.",
-      "popularity": 30.207,
-      "poster_path": "/r5n4CLoIjUcnT3shWDi6MHdJ25a.jpg",
-      "release_date": "2022-04-27",
-      "title": "Downton Abbey: A New Era",
-      "video": false,
-      "vote_average": 7.179,
-      "vote_count": 488
     }
   ],
   "favoriteMovies": [

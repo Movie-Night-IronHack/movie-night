@@ -11,7 +11,7 @@ function RenderCard({
   showWhatsAppButton = false,
 }) {
   return (
-    <div className="card event-item hover-shadow" style={{ width: "12rem" }}>
+    <div className="card event-item hover-shadow" style={{ width: "16rem" }}>
       <Link to={`/movie/${movie.id}`}>
         <img
           width={"191px"}

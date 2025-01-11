@@ -44,8 +44,8 @@ function Trailers({ movies }) {
       <h3 className="text-white mb-5">Trailers (Now Playing)</h3>
       <div className="d-flex flex-wrap gap-2">
         {trailers.map((trailer) => (
-          <div key={trailer.movieId} style={{ width: "300px" }}>
-            <h5 className="text-white text-center">{trailer.title}</h5>
+          <div key={trailer.movieId} style={{width: "300px" }}>
+            <h5 style={{maxWidth: "250px"}} className="ms-4 text-black text-center bg-white rounded py-1 text-center">{trailer.title}</h5>
             <Trailer videoId={trailer.trailerId} />
           </div>
         ))}
