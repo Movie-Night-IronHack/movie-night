@@ -1,9 +1,8 @@
-.sidebar-a {
-  text-decoration: none;
-  color:white;
-  transition: color 0.3s ease, transform 0.3s ease;
+.btn-selected{
+  background-color: grey !important;
+  bottom: 2px solid white;
+  opacity: 1;
 }
-
-.sidebar-a:hover{
-  color: yellowgreen;
+.btn-selected a{
+  color: white !important;
 }
