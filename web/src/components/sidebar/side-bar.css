@@ -1,8 +1,27 @@
 .btn-selected{
   background-color: grey !important;
-  bottom: 2px solid white;
   opacity: 1;
 }
 .btn-selected a{
+  text-decoration: none;
   color: white !important;
 }
+
+.no-selected{
+  background-color: white;
+}
+
+.no-selected a{
+  text-decoration: none;
+  color: grey;
+}
+
+.no-selected:hover {
+  background-color: grey;
+  opacity: 1;
+}
+
+.no-selected a:hover {
+  color: white;
+}
+
